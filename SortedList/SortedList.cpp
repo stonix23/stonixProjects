@@ -30,18 +30,37 @@ public:
     string getCity() const { return m_city; }
     string getState() const { return m_state; }
 
-
 };
 
 
-bool operator<( const NameLoc &lhs, const NameLoc &rhs )
+bool comparebyName( const NameLoc &lhs, const NameLoc &rhs )
 {
     return lhs.getName() < rhs.getName();
 }
 
+bool comparebyCity( const NameLoc &lhs, const NameLoc &rhs )
+{
+    return lhs.getCity() < rhs.getCity();
+}
+
+bool comparebyState( const NameLoc &lhs, const NameLoc &rhs )
+{
+    return lhs.getState() < rhs.getState();
+}
+
+
 
 void main()
 {
+
+	cout << "Sort by?" << endl << endl;
+	cout << "(1) Name" << endl;
+	cout << "(2) City" << endl;
+	cout << "(3) State" << endl << endl;
+	cout << ">> ";
+
+	int	SortMethod;
+	cin >> SortMethod;
 
 	list<NameLoc> nameLocList;
 
@@ -68,7 +87,20 @@ void main()
 
 
 	// Sort the list
-	nameLocList.sort();
+	switch (SortMethod)
+	{
+		case 1:
+		default:
+			nameLocList.sort(comparebyName);
+			break;
+		case 2:
+			nameLocList.sort(comparebyCity);
+			break;
+		case 3:
+			nameLocList.sort(comparebyState);
+			break;
+	}
+
 	
 	// Write the sorted list to a file
 	ofstream outFile("sorted.csv");
