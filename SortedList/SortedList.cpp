@@ -110,6 +110,7 @@ void main()
 		NameLoc t = *it;
 
 		outFile << t.getName() << "," << t.getCity() << "," << t.getState() << endl;
+		cout << t.getName() << "," << t.getCity() << "," << t.getState() << endl;
 
 	}
 
