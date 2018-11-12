@@ -77,7 +77,7 @@ bool gameOver_chk(char* board, char turn)
 	if ( (board[0] == turn) && (board[4] == turn) && (board[8] == turn) ) 
 			return true;
 
-	if ( (board[3] == turn) && (board[4] == turn) && (board[6] == turn) ) 
+	if ( (board[2] == turn) && (board[4] == turn) && (board[6] == turn) ) 
 			return true;
 
 	return false;
