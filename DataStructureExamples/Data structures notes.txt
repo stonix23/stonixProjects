@@ -1,0 +1,97 @@
+go through all practice problems
+review favorite O(nLog(n)) sorting (mergesort, quicksort)
+BST traversals, writing and debugging binary search
+review searching, graphs, trees
+look up gaussian blur filter
+
+review OOO section
+watch more videos on system design (chat service, elevator, TinyURL)
+more problems:  deck of cards, restaurant, parking lot
+practice on white board
+
+Dynamic programming (edit distance)
+Asynchrony, multithreading
+Design patterns
+consistent hashing
+
+https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
+
+
+associative array data structs
+std::map<...> - uses balanced search tree, log2N lookup time
+std::unordered_map<...> - uses hash table, can be O(1) lookup time with good hash key
+
+Heap - can be priority_queue, only top node is accessible
+make_heap(vector.begin, vector.end) allows access to intermediate elements
+
+Trees - stores naturally heirarchical data, quick search, insertion, deletion
+root, child, parent, sibling, grandparent, cousin
+descendents, ancestors
+leaf node - no children, height = 0
+internal nodes - have children
+
+Trie (dictionary), Network routing algorithm
+
+binary trees = each node has left/right child
+Strict binary tree - each node has 2 or 0 children
+Perfect binary tree - all levels completely filled
+Complete binary tree - all levels completely filled, last level is filled to the maximum left position
+Balanced binary tree - difference in height of left/right nodes is 1 or 0
+
+Max nodes at level i = 2^i
+Max nodes in tree (root being h=0):  n = 2^(h+1) - 1
+i.e. height is 2 (3 levels), n = 2^(2+1) - 1 = 7
+h = log2(n+1) - 1
+
+Min height = floor(log2 n)
+
+Modifiable collection
+
+		Array		LinkedList	Sorted array	BST
+Search		O(n)		O(n)		O(log2 n)	O(log2 n)
+Insert		O(1)		O(1)		O(n)		O(log2 n)
+Remove		O(n)		O(n)		O(n)		O(log2 n)
+
+
+Sorting
+-----------------------------
+
+Selection sort - Find min in A and swap with current position
+Bubble sort - If A[i] > A[i+1], swap ... keep swapping until highest values reach right side
+Insertion sort - Insert each A[i] value into position of sorted left half, shifting higher values rightward
+Merge sort - divide and conquer ; O(n * log2n) time complexity, O(n) space complexity ; can be done in-place if the input is a linked list
+Quick sort - Choose pivot value, swap values < pivot into left side, divide and conquer, use random pivot value ; in-place, space complexity is constant
+Radix sort - values (keys) are sorted into w # of buckets, one bucket for each possible digit value in the numbering system, repeat for each significant position in the word size ; could be faster if key length is less than log2n ; key length could be reduced by going to higher base (i.e. more buckets)
+
+Stable sorting - preserves the original order
+
+Asymptotic notation
+Big O - upper bound of growth rate of function
+Omega - lower bound
+Theta - tight bound
+
+NP - non-deterministic polynomial time
+
+
+
+       23
+   15	           43 
+1       18      27
+  7	   21     41
+   9  	 19
+    11
+
+
+
+		18467
+	11478			29358
+   6334	    15724	    26500
+41			19169
+			
+
+
+41 6334 11478 15724 18467 19169 26500 29358
+
+
+Bob Hagman - Borg distributed systems
+
